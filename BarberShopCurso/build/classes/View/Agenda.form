@@ -29,9 +29,9 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
-            <StringItem index="0" value="Alan"/>
-            <StringItem index="1" value="Pedro"/>
-            <StringItem index="2" value="Geovani"/>
+            <StringItem index="0" value="Barba"/>
+            <StringItem index="1" value="Cabelo"/>
+            <StringItem index="2" value="Barba+Cabelo"/>
           </StringArray>
         </Property>
       </Properties>
