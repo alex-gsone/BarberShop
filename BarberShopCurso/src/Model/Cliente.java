@@ -12,7 +12,7 @@ import java.util.Date;
  * @author alex
  */
 public class Cliente {
-    private String id;
+    private int id;
     private String nome;
     private char sexo;
     private Date dataNascimento;
@@ -22,10 +22,10 @@ public class Cliente {
     private String endereco;
     private String cep;
 
-    public Cliente(String id, String nome, char Sexo, Date dataNascimento, String telefone, String email, String rg, String endereco, String cep) {
+    public Cliente(int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg, String endereco, String cep) {
         this.id = id;
         this.nome = nome;
-        this.Sexo = Sexo;
+        this.sexo = sexo;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
         this.email = email;
@@ -34,19 +34,19 @@ public class Cliente {
         this.cep = cep;
     }
 
-    public Cliente(String id, String nome, char Sexo, String telefone, String endereco) {
+    public Cliente(int id, String nome, char Sexo, String telefone, String endereco) {
         this.id = id;
         this.nome = nome;
-        this.Sexo = Sexo;
+        this.sexo = sexo;
         this.telefone = telefone;
         this.endereco = endereco;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -59,11 +59,11 @@ public class Cliente {
     }
 
     public char getSexo() {
-        return Sexo;
+        return sexo;
     }
 
     public void setSexo(char Sexo) {
-        this.Sexo = Sexo;
+        this.sexo = Sexo;
     }
 
     public Date getDataNascimento() {
