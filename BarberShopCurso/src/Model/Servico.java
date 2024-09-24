@@ -10,6 +10,7 @@ package Model;
  * @author alex
  */
 public class Servico {
+
     private int id;
     private String descricao;
     private float valor;
@@ -35,6 +36,5 @@ public class Servico {
     public void setValor(float valor) {
         this.valor = valor;
     }
-    
-    
+
 }
