@@ -19,6 +19,12 @@ public class LoginController {
         this.view = view;
     }
     
+    public void entrarNoSistema(){
+//      Pegar um usuário da view
+//      Pesquisar  Usuário no Banco
+//      Se o usuário da view tiver o mesmo usuário e senha que o usuário do vindo do banco, direcionar para o menu.
+    }
+    
     public void fizTarefa(){
         System.out.println("Busquei algo do banco de dados");
         
