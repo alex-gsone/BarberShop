@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Usuario;
 import View.Login;
 
 /**
@@ -18,17 +19,25 @@ public class LoginController {
     public LoginController(Login view) {
         this.view = view;
     }
-    
-    public void entrarNoSistema(){
+
+    public void entrarNoSistema() {
 //      Pegar um usuário da view
 //      Pesquisar  Usuário no Banco
 //      Se o usuário da view tiver o mesmo usuário e senha que o usuário do vindo do banco, direcionar para o menu.
-    }
-    
-    public void fizTarefa(){
-        System.out.println("Busquei algo do banco de dados");
+//      Se não mostrar uma mensagem so usuário "Usuário ou senha inválidos".
+
+        String nome = view.getTextUsuario().getText();
+        String senha = view.getTextSenha().getText();
         
+        Usuario modelo = new Usuario(0, nome, senha);
+        
+
+    }
+
+    public void fizTarefa() {
+        System.out.println("Busquei algo do banco de dados");
+
         this.view.exibeMensagem("Executei o fiz tarefa");
     }
-    
+
 }
