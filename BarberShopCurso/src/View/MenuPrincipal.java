@@ -57,7 +57,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuOperação.setText("Operação");
 
+        jMenuItemAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/calendario.png"))); // NOI18N
         jMenuItemAgenda.setText("Agenda");
+        jMenuItemAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAgendaActionPerformed(evt);
+            }
+        });
         jMenuOperação.add(jMenuItemAgenda);
 
         jMenuBar1.add(jMenuOperação);
@@ -80,6 +86,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgendaActionPerformed
+        // Ao clicar no botão agenda no menu principal, a tela de agenda deve aparecer!
+        
+    }//GEN-LAST:event_jMenuItemAgendaActionPerformed
 
     /**
      * @param args the command line arguments
