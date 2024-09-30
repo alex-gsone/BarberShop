@@ -14,7 +14,7 @@ import View.Login;
  */
 public class LoginHelper {
 
-//    primeiramente ele vai precisar ter acesso à view!
+//  primeiramente ele vai precisar ter acesso à view!
     private final Login view;
 
     public LoginHelper(Login view) {
