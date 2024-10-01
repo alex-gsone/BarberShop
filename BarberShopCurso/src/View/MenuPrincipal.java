@@ -43,6 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuCadastro.setText("Cadastro");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/clientes_24.png"))); // NOI18N
         jMenuItem1.setText("Cliente");
         jMenuCadastro.add(jMenuItem1);
 
@@ -50,6 +51,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem2.setText("Serviço");
         jMenuCadastro.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/tesoura_32.png"))); // NOI18N
         jMenuItem3.setText("Usuário");
         jMenuCadastro.add(jMenuItem3);
 
