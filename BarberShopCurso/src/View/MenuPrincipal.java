@@ -91,6 +91,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgendaActionPerformed
         // Ao clicar no botão agenda no menu principal, a tela de agenda deve aparecer!
+        // o controller é o responsável por fazer a navegação!
+        Agenda agenda = new Agenda();
+        agenda.setVisible(true);
         
     }//GEN-LAST:event_jMenuItemAgendaActionPerformed
 
