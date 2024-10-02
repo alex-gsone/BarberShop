@@ -5,17 +5,22 @@
  */
 package View;
 
+import Controller.MenuPrincipalController;
+
 /**
  *
  * @author alex
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    private final MenuPrincipalController controller;
+
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        this.controller = new MenuPrincipalController(this);
     }
 
     /**
@@ -91,10 +96,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgendaActionPerformed
         // Ao clicar no botão agenda no menu principal, a tela de agenda deve aparecer!
-        // o controller é o responsável por fazer a navegação!
-        Agenda agenda = new Agenda();
-        agenda.setVisible(true);
-        
+        // o controller é o responsável por fazer a navegação
+        this.controller.navegarParaAgenda();
     }//GEN-LAST:event_jMenuItemAgendaActionPerformed
 
     /**
