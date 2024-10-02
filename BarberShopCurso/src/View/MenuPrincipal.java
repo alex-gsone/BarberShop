@@ -47,7 +47,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem1.setText("Cliente");
         jMenuCadastro.add(jMenuItem1);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/service_icon32.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/servico-de-gestao_24.png"))); // NOI18N
         jMenuItem2.setText("Serviço");
         jMenuCadastro.add(jMenuItem2);
 
