@@ -48,7 +48,7 @@ public class AgendaHelper {
         DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getjComboBoxCliente().getModel();
         
         for (Cliente cliente : clientes) {
-            comboBoxModel.addElement(cliente); // aqui está o truque 
+            comboBoxModel.addElement(cliente.getNome()); // aqui está o truque 
         }
     }
 
