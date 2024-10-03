@@ -6,8 +6,10 @@
 package Controller.Helper;
 
 import Model.Agendamento;
+import Model.Cliente;
 import View.Agenda;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -39,6 +41,14 @@ public class AgendaHelper {
                 agendamento.getObservacao()
             });
 
+        }
+    }
+
+    public void preencherClientes(ArrayList<Cliente> clientes) {
+        DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getjComboBoxCliente().getModel();
+        
+        for (Cliente cliente : clientes) {
+            comboBoxModel.addElement(cliente); // aqui está o truque 
         }
     }
 

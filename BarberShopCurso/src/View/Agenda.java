@@ -6,6 +6,7 @@
 package View;
 
 import Controller.AgendaController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -34,7 +35,7 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxServico = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -49,7 +50,7 @@ public class Agenda extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxCliente = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -58,13 +59,12 @@ public class Agenda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barba", "Cabelo", "Barba+Cabelo" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxServico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxServicoActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 110, 30));
+        getContentPane().add(jComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 110, 30));
 
         jButton1.setBackground(new java.awt.Color(60, 233, 106));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -138,13 +138,12 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 110, 30));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alan", "Pedro", "Geovani" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jComboBoxClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 110, 30));
+        getContentPane().add(jComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 110, 30));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,13 +178,13 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxServicoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxServicoActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jComboBoxClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jComboBoxClienteActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -237,8 +236,8 @@ public class Agenda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TableAgendamentos;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBoxCliente;
+    private javax.swing.JComboBox<String> jComboBoxServico;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -258,7 +257,10 @@ public class Agenda extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void iniciar() {
+        
+//      Vamos inicializar tubo aqui abaixo assim que a tela abrir...
         this.controller.atualizaTabela();
+        this.controller.atualizaClientes();
     }
 
     public JTable getTableAgendamentos() {
@@ -268,5 +270,23 @@ public class Agenda extends javax.swing.JFrame {
     public void setTableAgendamentos(JTable TableAgendamentos) {
         this.TableAgendamentos = TableAgendamentos;
     }
+
+    public JComboBox<String> getjComboBoxCliente() {
+        return jComboBoxCliente;
+    }
+
+    public void setjComboBoxCliente(JComboBox<String> jComboBoxCliente) {
+        this.jComboBoxCliente = jComboBoxCliente;
+    }
+
+    public JComboBox<String> getjComboBoxServico() {
+        return jComboBoxServico;
+    }
+
+    public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
+        this.jComboBoxServico = jComboBoxServico;
+    }
+    
+    
 
 }
