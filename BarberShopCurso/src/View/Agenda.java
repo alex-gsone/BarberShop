@@ -261,6 +261,7 @@ public class Agenda extends javax.swing.JFrame {
 //      Vamos inicializar tubo aqui abaixo assim que a tela abrir...
         this.controller.atualizaTabela();
         this.controller.atualizaClientes();
+        this.controller.AtualizaServicos();
     }
 
     public JTable getTableAgendamentos() {
