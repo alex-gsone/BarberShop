@@ -26,10 +26,17 @@ public class AgendaHelper {
         DefaultTableModel tableModel = (DefaultTableModel) view.getTableAgendamentos().getModel();
         tableModel.setNumRows(0);
 //      percorrer a lista preechendo o table model...
-//      cada linha da minha tabela é um objeto... 
+
         for (Agendamento agendamento : agendamentos) {
+//          cada linha da minha tabela é um objeto... 
             tableModel.addRow(new Object[]{
-            
+                agendamento.getId(),
+                agendamento.getCliente().getNome(),
+                agendamento.getServico().getDescricao(),
+                agendamento.getValor(),
+                agendamento.getDataFormatada(),
+                agendamento.getHoraFormatada(),
+                agendamento.getObservacao()
             });
 
         }
