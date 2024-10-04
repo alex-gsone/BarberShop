@@ -60,8 +60,7 @@ public class AgendaController {
         Servico servico = helper.obterServico();
         
 //      o helper seta o valor na tela!
-        helper.setarValor(servico.getValor());
-        
+        helper.setarValor(servico.getValor());        
     }
     
 }

@@ -60,6 +60,11 @@ public class Agenda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jComboBoxServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxServicoItemStateChanged(evt);
+            }
+        });
         jComboBoxServico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxServicoActionPerformed(evt);
@@ -199,6 +204,10 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
+    private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
+        this.controller.atualizaValor();
+    }//GEN-LAST:event_jComboBoxServicoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -263,6 +272,7 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaTabela();
         this.controller.atualizaClientes();
         this.controller.AtualizaServicos();
+        this.controller.atualizaValor();
     }
 
     public JTable getTableAgendamentos() {

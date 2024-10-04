@@ -66,7 +66,7 @@ public class AgendaHelper {
     }
 
     public void setarValor(float valor) {
-        
+        view.getjTextValor().setText(valor+"");
     }
 
 }
