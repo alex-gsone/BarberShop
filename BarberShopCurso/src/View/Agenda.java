@@ -8,6 +8,7 @@ package View;
 import Controller.AgendaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -49,7 +50,7 @@ public class Agenda extends javax.swing.JFrame {
         TableAgendamentos = new javax.swing.JTable();
         jTextField5 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextValor = new javax.swing.JTextField();
         jComboBoxCliente = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -131,12 +132,12 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 110, 30));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jTextValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jTextValorActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 110, 30));
+        getContentPane().add(jTextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 110, 30));
 
         jComboBoxCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,9 +187,9 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxClienteActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jTextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextValorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jTextValorActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -251,13 +252,13 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextValor;
     // End of variables declaration//GEN-END:variables
 
     private void iniciar() {
-        
+
 //      Vamos inicializar tubo aqui abaixo assim que a tela abrir...
         this.controller.atualizaTabela();
         this.controller.atualizaClientes();
@@ -287,7 +288,13 @@ public class Agenda extends javax.swing.JFrame {
     public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
         this.jComboBoxServico = jComboBoxServico;
     }
-    
-    
+
+    public JTextField getjTextValor() {
+        return jTextValor;
+    }
+
+    public void setjTextValor(JTextField jTextValor) {
+        this.jTextValor = jTextValor;
+    }
 
 }

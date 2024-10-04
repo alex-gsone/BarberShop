@@ -47,18 +47,26 @@ public class AgendaHelper {
 
     public void preencherClientes(ArrayList<Cliente> clientes) {
         DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getjComboBoxCliente().getModel();
-        
+
         for (Cliente cliente : clientes) {
-            comboBoxModel.addElement(cliente.getNome()); // aqui está o truque 
+            comboBoxModel.addElement(cliente); // aqui está o truque 
         }
     }
 
     public void preencherServicos(ArrayList<Servico> servicos) {
         DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getjComboBoxServico().getModel();
-        
+
         for (Servico servico : servicos) {
-            comboBoxModel.addElement(servico.getDescricao()); // aqui está o truque 
+            comboBoxModel.addElement(servico); // aqui está o truque 
         }
+    }
+
+    public Servico obterServico() {
+        return (Servico) view.getjComboBoxServico().getSelectedItem();
+    }
+
+    public void setarValor(float valor) {
+        
     }
 
 }
