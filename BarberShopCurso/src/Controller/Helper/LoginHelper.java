@@ -12,7 +12,7 @@ import View.Login;
  *
  * @author alex
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper{
 
 //  primeiramente ele vai precisar ter acesso à view!
     private final Login view;
@@ -27,16 +27,16 @@ public class LoginHelper {
         Usuario modelo = new Usuario(0, nome, senha);
         return modelo;
     }
-    
-    public void setarModelo(Usuario modelo){
+
+    public void setarModelo(Usuario modelo) {
         String nome = modelo.getNome();
         String senha = modelo.getSenha();
-        
+
         view.getTextUsuario().setName(nome);
         view.getTextSenha().setName(senha);
     }
-    
-    public void limparTela(){
+
+    public void limparTela() {
         view.getTextUsuario().setName("");
         view.getTextSenha().setName("");
     }
