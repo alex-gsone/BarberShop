@@ -38,34 +38,34 @@ public class AgendaController {
         this.helper.preencherTabela(agendamentos);
 
     }
-    
-    public void atualizaClientes(){
+
+    public void atualizaClientes() {
 //      buscar clientes do banco de dados
         ClienteDAO clienteDAO = new ClienteDAO();
         // sempre trabalhando com listas colocamos no plural (clientes)
         ArrayList<Cliente> clientes = clienteDAO.selectAll();
-        
-        
+
 //      exibir clientes no Combobox cliente 
         helper.preencherClientes(clientes);
     }
-    
-    public void AtualizaServicos(){
+
+    public void AtualizaServicos() {
         ServicoDAO servicoDAO = new ServicoDAO();
         ArrayList<Servico> servicos = servicoDAO.selectAll();
         helper.preencherServicos(servicos);
     }
-    
-    public void atualizaValor(){
+
+    public void atualizaValor() {
         Servico servico = helper.obterServico();
-        
+
 //      o helper seta o valor na tela!
-        helper.setarValor(servico.getValor());        
+        helper.setarValor(servico.getValor());
     }
-    public void agendar(){
-    //buscar objeto agendamento da tela
-        
-    //salva objeto no banco de dados
+
+    public void agendar() {
+        //buscar objeto agendamento da tela
+
+        //salva objeto no banco de dados
     }
-    
+
 }

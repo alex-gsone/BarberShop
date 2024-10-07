@@ -71,12 +71,12 @@ public class AgendaHelper implements IHelper {
 
     @Override
     public Object obterModelo() {
-//        new Agendamento()
+        Agendamento agendamento = new Agendamento(, cliente, servico, 0, date, observacao);
     }
 
     @Override
     public void limparTela() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
 }
