@@ -95,11 +95,10 @@ public class AgendaHelper implements IHelper {
 
     @Override
     public void limparTela() {
-        view.getjTextId().setText("");
+        view.getjTextId().setText("0");
         view.getjTextObservacao().setText("");
         view.getjTextData().setText("");
         view.getjTextHora().setText("");
-
     }
 
 }
