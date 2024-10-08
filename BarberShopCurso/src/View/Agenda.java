@@ -317,4 +317,37 @@ public class Agenda extends javax.swing.JFrame {
         this.jTextValor = jTextValor;
     }
 
+    public JTextField getjTextData() {
+        return jTextData;
+    }
+
+    public void setjTextData(JTextField jTextData) {
+        this.jTextData = jTextData;
+    }
+
+    public JTextField getjTextHora() {
+        return jTextHora;
+    }
+
+    public void setjTextHora(JTextField jTextHora) {
+        this.jTextHora = jTextHora;
+    }
+
+    public JTextField getjTextId() {
+        return jTextId;
+    }
+
+    public void setjTextId(JTextField jTextId) {
+        this.jTextId = jTextId;
+    }
+
+    public JTextField getjTextObservacao() {
+        return jTextObservacao;
+    }
+
+    public void setjTextObservacao(JTextField jTextObservacao) {
+        this.jTextObservacao = jTextObservacao;
+    }
+    
+    
 }

@@ -64,6 +64,10 @@ public class AgendaHelper implements IHelper {
     public Servico obterServico() {
         return (Servico) view.getjComboBoxServico().getSelectedItem();
     }
+    
+     public Cliente obterCliente() {
+        return (Cliente) view.getjComboBoxCliente().getSelectedItem();
+    }
 
     public void setarValor(float valor) {
         view.getjTextValor().setText(valor + "");
@@ -71,7 +75,13 @@ public class AgendaHelper implements IHelper {
 
     @Override
     public Object obterModelo() {
-        Agendamento agendamento = new Agendamento(, cliente, servico, 0, date, observacao);
+//      Vamos obter um modelo, e depois realizar o agendamento:       
+//      Agendamento agendamento = new Agendamento(, cliente, servico, 0, date, observacao);
+
+        String idString = view.getjTextId().getText();
+        int id = Integer.parseInt(idString);
+        Cliente cliente = obterCliente();
+
     }
 
     @Override
