@@ -64,8 +64,8 @@ public class AgendaHelper implements IHelper {
     public Servico obterServico() {
         return (Servico) view.getjComboBoxServico().getSelectedItem();
     }
-    
-     public Cliente obterCliente() {
+
+    public Cliente obterCliente() {
         return (Cliente) view.getjComboBoxCliente().getSelectedItem();
     }
 
@@ -81,12 +81,25 @@ public class AgendaHelper implements IHelper {
         String idString = view.getjTextId().getText();
         int id = Integer.parseInt(idString);
         Cliente cliente = obterCliente();
+        Servico servico = obterServico();
+        String stringValor = view.getjTextValor().getText();
+        float valor = Float.parseFloat(stringValor);
+        String data = view.getjTextData().getText();
+        String hora = view.getjTextHora().getText();
+        String dataHora = data + " " + hora;
+        String observacao = view.getjTextObservacao().getText();
 
+        Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, observacao);
+        return agendamento;
     }
 
     @Override
     public void limparTela() {
-        
+        view.getjTextId().setText("");
+        view.getjTextObservacao().setText("");
+        view.getjTextData().setText("");
+        view.getjTextHora().setText("");
+
     }
 
 }

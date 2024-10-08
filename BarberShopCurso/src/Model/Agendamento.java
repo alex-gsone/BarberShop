@@ -30,7 +30,7 @@ public class Agendamento {
         this.servico = servico;
         this.valor = valor;
         try {
-            this.date = new SimpleDateFormat("dd/mm/yyyy HH:mm").parse(date);
+            this.date = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(date);
         } catch (ParseException ex) {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
