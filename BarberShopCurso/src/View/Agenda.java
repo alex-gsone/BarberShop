@@ -215,7 +215,7 @@ public class Agenda extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.controller.agendar();
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -348,6 +348,5 @@ public class Agenda extends javax.swing.JFrame {
     public void setjTextObservacao(JTextField jTextObservacao) {
         this.jTextObservacao = jTextObservacao;
     }
-    
-    
+
 }
